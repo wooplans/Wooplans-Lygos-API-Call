@@ -11,7 +11,8 @@ app.post('/create-payment', async (req, res) => {
     const payment = await lygos.initPayment({
       amount: price,
       shop_name: 'Your Brand',
-      order_id: ORDER-${id}-${Date.now()},
+      order_id: `ORDER-${id}-${Date.now()}`,
+
       success_url: 'https://your-framer-site.framer.app/success',
       failure_url: 'https://your-framer-site.framer.app/failure',
       title,
